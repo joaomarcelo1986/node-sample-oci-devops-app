@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: node-oke-app
-        image: <region-key>.ocir.io/<tenancy-namespace>/oke-apps/node-oke-app:${BUILDRUN_HASH}
+        image: iad.ocir.io/idkkibu1oc3i/oke-apps/node-oke-app:${BUILDRUN_HASH}
         imagePullPolicy: Always
         ports:
         - name: node-oke-app
