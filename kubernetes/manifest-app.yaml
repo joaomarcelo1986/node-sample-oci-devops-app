@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-oke-app
-  namespace: oracle
+  namespace: devops
 spec:
   selector:
     matchLabels:
       app: node-oke-app
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
@@ -28,7 +28,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: node-oke-app-svc
-  namespace: oracle
+  namespace: devops
 spec:
   selector:
     app: node-oke-app
@@ -41,7 +41,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: node-oke-app-ing
-  namespace: oracle
+  namespace: devops
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
